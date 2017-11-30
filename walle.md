@@ -19,7 +19,7 @@
 
         from:                *********@qq.com
 
-3. 其实也可以放在 `.env` 文件中，`laravel` 框架配置
+3. 其实也可以放在 `.env` 文件中，`yii` 框架配置
 
 4. 如此之后 `./yii walle/setup` 即可安装
 
