@@ -10,20 +10,20 @@
 
 2. 需要提前配置好邮件发信人，可以使用qq发信，不必自己配置 config/local.php
 
-    host:                smtp.qq.com
-    username:            *********@qq.com
-    password:            ****************
-    port:                20
-    encryption:          tls
+        host:                smtp.qq.com
+        username:            *********@qq.com
+        password:            ****************
+        port:                20
+        encryption:          tls
 
-    from:                *********@qq.com
+        from:                *********@qq.com
 
 3. 其实也可以放在 `.env` 文件中，`laravel` 框架配置
 
 4. 如此之后 `./yii walle/setup` 即可安装
 
 5. 安装之后需要创建管理员用户，接收到邮件确认激活，假如没收到邮件请检查发信设置。
-   成功之后在数据库中将字段 `role, status` 统一设置为 2，即为管理员。删除不必要的walle初始用户。
+   成功之后在数据库中将字段 `role, status` 统一设置为 2，即为管理员。删除不必要的初始用户。
 
 6. 前期完成，准备设置项目，待续……
 
