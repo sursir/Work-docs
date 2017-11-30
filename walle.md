@@ -2,13 +2,14 @@
 ================================
 
 
-1. 需要提前设置好数据库配置，创建数据库 config/web.php, config/local.php
-    如果需要新创建数据库用户
-    create user zhangsan identified by 'zhangsan';
-    grant all privileges on zhangsanDb.* to zhangsan@'%' identified by 'zhangsan';
-    flush privileges;
+1. 需要提前设置好数据库配置，创建数据库 **`config/web.php, config/local.php`**
 
-2. 需要提前配置好邮件发信人，可以使用qq发信，不必自己配置 config/local.php
+        // 如果需要新创建数据库用户
+        create user zhangsan identified by 'zhangsan';
+        grant all privileges on zhangsanDb.* to zhangsan@'%' identified by 'zhangsan';
+        flush privileges;
+
+2. 需要提前配置好邮件发信人，可以使用qq发信，不必自己配置 **`config/local.php`**
 
         host:                smtp.qq.com
         username:            *********@qq.com
