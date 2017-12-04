@@ -21,6 +21,57 @@ Git
 
 工作涉及涉及到的操作：
 
+    基本配置：
+
+        使用 git 是需要进行一些基本的个人配置的。例如 账户（username，email）与 一些偏好默认设置
+
+        git config
+
+        --help   帮助
+        --global 全局设置 （所有项目可以通用的配置，** 不应该包含账户设置 **）
+        --edit   编辑
+        --list   查看所有设置
+        --add    添加设置
+
+
+        // 首先设置账户
+
+        git config --add user.name <Your name>
+        git config --add user.email <Your.email@pixara.cn>
+
+        // push 模式
+        git config --add push.default simple    # 设置当前的push模式，推荐 simple，禁止使用 matching
+
+        // 设置你的默认编辑器 （可以使用全局配置）
+
+        git config --global --add core.editor vi         # 设置 vi 为默认编辑器 当然可以设置其他
+
+        // merge 工具 (推荐使用 p4merge （可以使用全局配置）)
+
+        git config --global --edit
+
+        ```
+          [merge]
+                tool = p4merge
+
+          [mergetool]
+                trustExitCode = false
+                keepTemporaries = false
+                keepBackup = false
+                prompt = false
+
+          [diff]
+                external = p4diff
+
+          [mergetool "p4merge"]
+                cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+        ```
+
+
+        * 非命令行模式下（gui）下gui工具会有自己的配置，也请手动配置
+
+
+
     远程仓库交互操作：
 
         // 克隆一个项目（仓库）到本地
@@ -168,8 +219,8 @@ Gitlab - 项目托管工具
         重点在于规则。工具使用可选
 
         2. 工具安装以及使用：https://gist.github.com/sursir/d8185c21ccdafd415c5e768a657b2777
-        
-        3. changlog 应该与issue与需求挂钩，而不应该与提交记录挂钩。 
+
+        3. changlog 应该与issue与需求挂钩，而不应该与提交记录挂钩。
 
 
     （二）关于 issue 的使用
