@@ -220,7 +220,9 @@ Gitlab - 项目托管工具
 
         2. 工具安装以及使用：https://gist.github.com/sursir/d8185c21ccdafd415c5e768a657b2777
 
-        3. changlog 应该与issue与需求挂钩，而不应该与提交记录挂钩。
+        3. changelog 应该与issue与需求挂钩，而不应该与提交记录挂钩。
+
+        4. changelog 规范请看 <https://github.com/sursir/Work-docs/blob/master/CHANGELOG-rule.md>
 
 
     （二）关于 issue 的使用
